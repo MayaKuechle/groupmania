@@ -9,6 +9,8 @@ exports.allAccess = (req, res) => {
   exports.adminBoard = (req, res) => {
     res.status(200).send("Admin Content.");
   };
+
+ /*<script src="../../extensions/Editor/js/dataTables.editor.min.js"></script*/
   
   exports.moderatorBoard = (req, res) => {
     res.status(200).send("Moderator Content.");

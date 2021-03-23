@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groupmania</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="header">
+				<img alt="Bootstrap Image Preview" src="img/icon-left-font-monochrome-black.svg">
+				<div class="header-right">
+				  <a class="active" href="homepage.html">
+					<img border="0" alt="W3Schools" src="img/home.png" width="100" height="100">
+				  </a>
+				  <!--write post-->
+				  	<a class="open-button" onclick="openForm()">
+					<img border="0" alt="W3Schools" src="img/add.png" width="100" height="100">
+					</a>
+					<div class="form-popup" id="myForm">
+						<form action="/action_page.php" class="form-container">
+							<h1>Post...</h1>
+
+							<label for="email"><b>Share your thoughts</b></label>
+							<input type="text" placeholder="Write something..." name="email" required>
+
+							<button type="submit" class="btn">Post</button>
+							<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+						</form>
+					</div>
+
+					<script>
+						function openForm() {
+						document.getElementById("myForm").style.display = "block";
+						}
+
+						function closeForm() {
+						document.getElementById("myForm").style.display = "none";
+						}
+					</script>
+
+					<!--notification button-->
+					<a class="open-button" onclick="openForm()">
+						<img border="0" alt="W3Schools" src="img/notification.png" width="100" height="100">
+					</a>
+
+					<div class="form-popup" id="myForm-notifications">
+						<form action="/action_page.php" class="form-container-notifications">
+							<h1>Notifcations</h1>
+							<!--<div class="notifications">
+							</div>-->
+							<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+						</form>
+					</div>
+
+					<script>
+						function openForm() {
+						document.getElementById("myForm").style.display = "block";
+						}
+
+						function closeForm() {
+						document.getElementById("myForm").style.display = "none";
+						}
+					</script>
+					<a href="login.html">Logout</a>
+				</div>
+			</div>
+		</div>
+		
+	<div class="row">
+		<div class="col-md-8">
+			<div class="intro">
+		
+				<div class="page-header">
+					<h1 class="groupmania-header">
+						<strong>Welcome back!</strong>
+					</h1>
+				</div>
+				<h4 class="login-header">
+					Check out what your colleagues are up to
+				</h4>
+			</div>
+			<!--
+			<div class="writebox">
+				<div class="form-group">
+						
+					<label for="exampleInputPassword1">
+						Write Something
+					</label>
+					<input type="password" class="form-control" id="exampleInputPassword1">
+				</div>
+				<button type="submit" class="btn btn-primary">
+					Post
+				</button>
+			</div>
+			--> 
+			<div class="row">
+				<div class="posts">
+                    
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn">Title</button>
+                    
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                    
+                      <!-- Modal content -->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h2>Post title</h2>
+                          <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                          <p>Article..</p>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="col-md-8">
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">
+                                       Comment Something
+                                    </label>
+                                    <input type="comment-bar" class="form-control comment-bar" id="comment-bar">
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Post
+                                </button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <script>
+                    // Get the modal
+                    var modal = document.getElementById("myModal");
+                    
+                    // Get the button that opens the modal
+                    var btn = document.getElementById("myBtn");
+                    
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+                    
+                    // When the user clicks the button, open the modal 
+                    btn.onclick = function() {
+                      modal.style.display = "block";
+                    }
+                    
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                      modal.style.display = "none";
+                    }
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                      if (event.target == modal) {
+                        modal.style.display = "none";
+                      }
+                    }
+                    </script>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="profile">
+				<div class="card">
+                    <!--<img src="img.jpg" alt="John" style="width:100%">-->
+                    <h1 class="profilename">Name</h1>
+                    <p class="jobtitle">CEO & Founder</p>
+					<p class="city">New York HQ</p>
+					<button onclick="document.location='user.html'" class="btn btn-success" type="type profilebutton">My Profile</button>
+					<!--<button onclick="document.location='user.html'" class="btn btn-success" type="type profilebutton">View My Posts</button>-->
+                  </div>
+			</div>
+		</div>
+	</div>
+	<ul class="pagination">
+		<li><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+	  </ul>
+	<div class="footer">
+		<div class="row">
+			<div class="col-md-12">
+					<strong>©Groupmania</strong><br>
+					795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br>
+					</abbr> P:(123) 456-7890 <br>groupmania@email.com
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

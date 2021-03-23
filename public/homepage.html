@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Groupmania</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="css/style.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+	<div class="container-fluid">
+			<div class="row">
+				<div class="header">
+					<img alt="icon-left-font-monochrome-black" src="images/icon-left-font-monochrome-black.svg" class="groupmania_logo">
+					<div class="header-right">
+					<a class="active" href="homepage.html">
+						<img border="0" alt="W3Schools" src="images/home.png" width="100" height="100">
+					</a>
+					<!--write post-->
+						<a class="open-button" onclick="openForm()">
+						<img border="0" alt="W3Schools" src="images/add.png" width="100" height="100">
+						</a>
+						<div class="form-popup" id="myForm">
+							<form action="/action_page.php" class="form-container">
+								<h1>Post...</h1>
+
+								<label for="email"><b>Share your thoughts</b></label>
+								<input type="text" placeholder="Write something..." name="email" required>
+
+								<button type="submit" class="btn">Post</button>
+								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+							</form>
+						</div>
+
+						<script>
+							function openForm() {
+							document.getElementById("myForm").style.display = "block";
+							}
+
+							function closeForm() {
+							document.getElementById("myForm").style.display = "none";
+							}
+						</script>
+
+						<!--notification button-->
+						<a class="open-button" onclick="openForm()">
+							<img border="0" alt="W3Schools" src="images/notification.png" width="100" height="100">
+						</a>
+
+						<div class="form-popup" id="myForm-notifications">
+							<form action="/action_page.php" class="form-container-notifications">
+								<h1>Notifcations</h1>
+								<!--<div class="notifications">
+								</div>-->
+								<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+							</form>
+						</div>
+
+						<script>
+							function openForm() {
+							document.getElementById("myForm").style.display = "block";
+							}
+
+							function closeForm() {
+							document.getElementById("myForm").style.display = "none";
+							}
+						</script>
+						<a href="login.html">Logout</a>
+					</div>
+				</div>
+				<div class="posts">
+
+				</div>
+			</div>
+			
+		<div class="row">
+			<div class="col-md-8">
+				<div class="intro">
+			
+					<div class="page-header">
+						<h1 class="groupmania-header">
+							<strong>Welcome back!</strong>
+						</h1>
+					</div>
+					<h4 class="login-header">
+						Check out what your colleagues are up to
+					</h4>
+				</div>
+
+				<body class="dataTables">
+					<div class="container">
+			
+						<h1>
+							DataTables Editor <span>Groupmania</span>
+						</h1>
+						
+						<table cellpadding="0" cellspacing="0" border="0" class="display" id="Groupmania" width="100%">
+							<thead>
+								<tr>
+									<th>title</th>
+									<th>content</th>
+								</tr>
+							</thead>
+						</table>
+			
+					</div>
+				</body>
+
+				<button id="addRow">Add new row</button>
+				<table id="example" class="display" style="width:100%">
+					<thead>
+						<tr>
+							<th>title</th>
+							<th>content</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+						</tr>
+					</tfoot>
+				</table>
+				<script type="text/javascript">  
+
+	$(document).ready( function () {
+					$('#myTable').DataTable();
+				} );
+				$(document).ready(function() {
+					var t = $('#example').DataTable();
+					var counter = 1;
+				
+					$('#addRow').on( 'click', function () {
+						t.row.add( [
+							counter +'.1',
+							counter +'.2',
+							counter +'.3',
+							counter +'.4',
+							counter +'.5'
+						] ).draw( false );
+				
+						counter++;
+					} );
+				
+					// Automatically add a first row of data
+					$('#addRow').click();
+				} );
+	/*
+					var editor; 
+
+					$(document).ready(function () {  
+						//editor = new $.fn.dataTable.Editor( {
+						$('#example').DataTable({  
+							"ajax": {  
+								"url": "posts",  
+								"type": "GET",  
+								"datatype": "json",
+								"dataSrc": ""								
+							},  
+							"columns": [  
+								{ "data": "title" },  
+								{ "data": "content" },  
+							]  
+						});  
+					});  */
+
+					/*
+					add rows example
+					either pop up form (comment, send to API)
+					or hidden /collapsle div
+
+					before draw send data to API
+
+					delete account small footer warning
+					are you sure you want to delete account
+
+					add rows i want name
+					*/
+      
+				</script>  
+			</div>
+			<div class="col-md-4">
+				<div class="profile">
+					<div class="card">
+						<h1 class="profilename">Name</h1>
+						<p class="jobtitle">CEO & Founder</p>
+						<p class="city">New York HQ</p>
+						<button onclick="document.location='user.html'" class="btn btn-success" type="type profilebutton">My Profile</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="row">
+				<div class="col-md-12">
+						<strong>©Groupmania</strong><br>
+						795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br>
+						</abbr> P:(123) 456-7890 <br>groupmania@email.com
+				</div>
+			</div>
+		</div>
+	</div>
+  </body>
+</html>

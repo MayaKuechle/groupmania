@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Groupmania</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+<div class="container-fluid">
+		<div class="row">
+			<div class="header">
+				<img alt="Bootstrap Image Preview" src="img/icon-left-font-monochrome-black.svg">
+				<div class="header-right">
+				  <a href="homepage.html">
+            <img border="0" alt="W3Schools" src="img/home.png" width="100" height="100">
+          </a>
+          <a class="open-button" onclick="openForm()">
+					  <img border="0" alt="W3Schools" src="img/add.png" width="100" height="100">
+          </a>
+          <!--<button class="open-button" onclick="openForm()">Open Form</button>-->
+
+          <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Login</h1>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+          <script>
+          function openForm() {
+            document.getElementById("myForm").style.display = "block";
+          }
+
+          function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+          }
+          </script>
+          <a href="signup.html">
+            <img border="0" alt="W3Schools" src="img/notification.png" width="100" height="100">
+          </a>
+            <!--<a href="signup.html">
+            <img border="0" alt="W3Schools" src="img/messenger.png" width="100" height="100">
+            </a>-->
+          <a href="login.html">Logout</a>
+                    <!--<div class="dropdown">
+                    
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                            User
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item disabled" href="user.html">My Profile</a> <a class="dropdown-item" href="#">Log Out</a>
+                        </div>-->
+                    <!--</div>-->
+
+				</div>
+			</div>
+		</div>
+
+	  <div class="row">
+      <div class="col-md-12">
+        <div class="profile">
+          <div class="card">
+                      <!--<img src="img.jpg" alt="John" style="width:100%">-->
+                      <h1>John Doe</h1>
+                      <p class="title">CEO & Founder</p>
+                      <p>New York HQ</p>
+                      <!--<button onclick="document.location='followers.html'" class="btn btn-success" type="type profilebutton">My Followers</button>-->
+                      <button onclick="document.location='followers.html'" class="btn btn-success" type="type profilebutton">Delete Account</button>
+          </div>
+        </div>
+      </div>
+    </div>	
+    
+    <div class="row">
+      <div class="col-md-12">
+          <div class="page-header">
+            <h1 class="myprofile-intro">
+              <strong>Posts</strong>
+            </h1>
+        </div>
+        <div class="row" id="posts">
+
+        </div>
+      </div>
+	</div>
+
+	<div class="footer">
+		<div class="row">
+			<div class="col-md-12">
+					<strong>©Groupmania</strong><br>
+					795 Folsom Ave, Suite 600<br> San Francisco, CA 94107<br>
+					</abbr> P:(123) 456-7890 <br>groupmania@email.com
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
